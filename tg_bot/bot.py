@@ -23,7 +23,7 @@ MODEL_NAMES = ['lgbm_model_hog_best.pkl',
                'rfc_model_pic_best.pkl',
                ]
 load_dotenv()
-config = dotenv_values(".env")
+config = dotenv_values("../.env")
 BOT_TOKEN = config['BOT_TOKEN']
 
 # fake token
@@ -168,7 +168,7 @@ async def ml_photo(message: Message, bot: Bot, state: FSMContext):
     # cv2.imwrite('pic.jpg', img)
 
     image, face_image, hog_image = ImageProcessing().transform_image(img)
-    models_path = os.path.join('models', 'ML')
+    models_path = os.path.join('../models', 'ML')
     predictions = np.array([])
     for model_name in MODEL_NAMES:
         model = pickle.load(open(os.path.join(models_path, model_name), 'rb'))

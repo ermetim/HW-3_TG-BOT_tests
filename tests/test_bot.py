@@ -3,20 +3,20 @@ from aiogram.filters import Command
 from aiogram.methods import SendMessage
 from aiogram.types import ReplyKeyboardMarkup
 
-from bot import command_handler
-from bot import continue_yes
-from bot import continue_no
-from bot import continue_unexpected
-from bot import ml_method
-from bot import dl_method
-from bot import unexpected_method
-from bot import quit_method
-from bot import generate_keyboard
-from bot import States
+from tg_bot.bot import command_handler
+from tg_bot.bot import continue_yes
+from tg_bot.bot import continue_no
+from tg_bot.bot import continue_unexpected
+from tg_bot.bot import ml_method
+from tg_bot.bot import dl_method
+from tg_bot.bot import unexpected_method
+from tg_bot.bot import quit_method
+from tg_bot.bot import generate_keyboard
+from tg_bot.bot import States
 
-from aiogram_tests import MockedBot
-from aiogram_tests.handler import MessageHandler
-from aiogram_tests.types.dataset import MESSAGE
+from tests.aiogram_tests import MockedBot
+from tests.aiogram_tests.handler import MessageHandler
+from tests.aiogram_tests.types.dataset import MESSAGE
 
 
 # Тест функции generate_keyboard
